@@ -1,0 +1,33 @@
+.dialogsBlock {
+    width: 100%;
+    height: 98%;
+
+    display: grid;
+    grid-template-columns: 300px auto;
+
+    border: 1px solid #363738;
+    border-radius: 15px;
+
+    padding: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.dialogsBlock a {
+    text-decoration: none;
+}
+
+.dialog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: #363738;
+    width: 1px;
+    height: 100%;
+}
+
+.dialogsName {
+    margin-right: 10px;
+}

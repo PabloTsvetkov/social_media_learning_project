@@ -1,0 +1,39 @@
+.dialogPreview {
+    width: 100%;
+    height: 60px;
+
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+.dialogPreview:hover {
+    cursor: pointer;
+    background-color: #FFFFFF0A;
+}
+
+.dialogPreview .imageContainer {
+    height: 60px;
+    width: 60px;
+}
+.dialogPreview .imageContainer img {
+    height: 50px;
+    width: 50px;
+}
+
+.dialogInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dialogInfo .profileName {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.dialogInfo .message {
+    color: #939393;
+    font-size: 14px;
+    text-decoration: none;
+}

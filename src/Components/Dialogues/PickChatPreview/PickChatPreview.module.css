@@ -1,0 +1,17 @@
+.pickTheChatPreview {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #828282;
+    font-size: 20px;
+}
+
+.pickTheChatPreview svg {
+    font-size: 50px;
+    margin-bottom: 10px;
+}

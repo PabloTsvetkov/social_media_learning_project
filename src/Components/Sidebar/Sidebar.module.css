@@ -1,0 +1,22 @@
+.linkList {
+    color: #777777;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.linkList a {
+    text-decoration: none;
+    color: #777777;
+}
+
+.listItem {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.listItem:hover {
+    background-color: #FFFFFF14;
+    cursor: pointer;
+}

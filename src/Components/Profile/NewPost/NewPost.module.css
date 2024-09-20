@@ -1,0 +1,128 @@
+.newPostContainer {
+    grid-area: postEditor;
+    height: 180px;
+
+    background-color: #444446;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.writingPost {
+    height: 45%;
+
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+
+}
+.smallPorfileImage {
+    
+}
+.smallPorfileImage img {
+    height: 30px;
+    width: 30px;
+}
+.inputContainer {
+    margin-left: 15px;
+    width: 90%;
+}
+.inputContainer input {
+    width: 100%;
+
+    background-color: #444446;
+    color: #FFFFFF;
+    font-size: 15px;
+    border: none;
+    outline: none;
+
+}
+
+.visibilitySettings {
+    height: 25%;
+
+    margin-left: 20px;
+    margin-right: 30px;
+
+    border-top: solid 1px #555556;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    font-size: 15px;
+}
+.personVisibility {
+    cursor: pointer;
+}
+.postDate {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.mainSettings {
+    height: 30%;
+
+    border-top: 1px solid #555556;
+
+    padding-left: 10px;
+    padding-right: 20px;
+
+    display: flex;
+    align-items: center;
+
+    color: #828282;
+}
+
+.mainSettings .icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+}
+
+.mainSettings .icon svg {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.mainSettings .moreButton {
+    display: flex;
+
+    margin-left: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.settingsIcon {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sendButtonContainer {
+    width: 100px;
+    height: 32px;
+}
+.sendButtonContainer button {
+    height: 100%;
+    width: 100%;
+    
+    font-size: 16px;
+    color: #FFFFFF;
+
+    background-color: #666666;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
