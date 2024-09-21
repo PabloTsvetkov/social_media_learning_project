@@ -2,6 +2,9 @@ import React from "react";
 
 import ProfileImage from './../../profileImage.png';
 
+import { FaRegHeart, FaRegComments, FaRegEye } from "react-icons/fa";
+import { TiArrowForwardOutline } from "react-icons/ti";
+
 import s from './Post.module.css';
 
 export default function Post(props) {
@@ -25,12 +28,12 @@ export default function Post(props) {
 
                 <div className={s.postStats}>
                     <div className={s.likeButtons}>
-                        <div className={s.likes}>12</div>
-                        <div className={s.comments}>5</div>
-                        <div className={s.reposts}>3</div>
+                        <div className={s.likes}><FaRegHeart />{props.likesCount}</div>
+                        <div className={s.comments}><FaRegComments />{props.commentsBlock.commentsCount}</div>
+                        <div className={s.reposts}><TiArrowForwardOutline />{props.repostsCount}</div>
                     </div>
                     <div className={s.viewers}>
-                        1.3k
+                        <FaRegEye />{props.viewsCount}
                     </div>
                 </div>
             </div>

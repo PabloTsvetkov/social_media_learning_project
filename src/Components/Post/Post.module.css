@@ -91,6 +91,11 @@
 
     margin-right: 3px;
     margin-left: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.likeButtons div svg {
+    margin-right: 5px;
 }
 .viewers {
     margin-left: auto;
@@ -99,4 +104,10 @@
     align-self: center;
 
     color: #888888;
+
+    display: flex;
+    align-items: center;
+}
+.viewers svg {
+    margin-right: 5px;
 }
