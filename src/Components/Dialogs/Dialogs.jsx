@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './Dialogues.module.css';
+import s from './Dialogs.module.css';
 import DialogPreview from './DialogPreview/DialogPreview';
 
 import { Routes, Route } from 'react-router-dom';

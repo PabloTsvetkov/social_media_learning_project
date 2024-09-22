@@ -3,7 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Profile from './Components/Profile/Profile';
-import Dialogues from './Components/Dialogues/Dialogues';
+import Dialogs from './Components/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App(props) {
@@ -20,8 +20,8 @@ function App(props) {
         </nav>
         <div className='mainContent'>
           <Routes>
-            <Route path='/profile' element={<Profile posts={props.posts} />} />
-            <Route path='/dialogues/*' element={<Dialogues dialogsPreview={props.dialogsPreview} />} />
+            <Route path='/profile' element={<Profile posts={props.state.postsBlock.posts} />} />
+            <Route path='/dialogs/*' element={<Dialogs dialogsPreview={props.state.dialogsBlock.dialogsPreview} />} />
           </Routes>
         </div>
 

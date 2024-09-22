@@ -6,7 +6,7 @@ import ProfileImage from './../../../profileImage.png';
 import { Link } from 'react-router-dom';
 
 export default function DialogPreview({ name = "Bob Bobov", message = "Some message", id = "-1" }) {
-    let path = `/dialogues/${id}`;
+    let path = `/dialogs/${id}`;
     return (
         <>
             <Link to={path}>

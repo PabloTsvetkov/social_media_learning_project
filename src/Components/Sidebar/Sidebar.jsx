@@ -10,7 +10,7 @@ export default function Sidebar() {
           Profile
         </div>
       </Link>
-      <Link to="/dialogues">
+      <Link to="/dialogs">
         <div className={s.listItem}>
           Messages
         </div>
