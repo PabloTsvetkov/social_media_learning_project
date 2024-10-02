@@ -28,7 +28,7 @@ export default function Post(props) {
 
                 <div className={s.postStats}>
                     <div className={s.likeButtons}>
-                        <div className={s.likes}><FaRegHeart />{props.likesCount}</div>
+                        <div className={s.likes} onClick={ () => {alert('you like the post')} }><FaRegHeart />{props.likesCount}</div>
                         <div className={s.comments}><FaRegComments />{props.commentsBlock.commentsCount}</div>
                         <div className={s.reposts}><TiArrowForwardOutline />{props.repostsCount}</div>
                     </div>
