@@ -1,4 +1,5 @@
 import NewPost from "../Components/Profile/NewPost/NewPost";
+import RenderEntireTree from "../rerender";
 
 let state = {
     dialogsBlock: {
@@ -100,6 +101,7 @@ export let AddPost = (PostText) => {
         viewsCount: 0
     };
     state.postsBlock.posts.push(NewPostObject);
+    RenderEntireTree(state);
 }
 
 export default state;
