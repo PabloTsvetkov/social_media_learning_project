@@ -17,7 +17,11 @@ export default function NewPost(props) {
     let AddNewPost = () => {
         let textOfNewPost = textOfNewPostRef.current.value;
         props.AddPost(textOfNewPost);
-        console.log(state.postsBlock.posts);
+    }
+
+    let handleNewPostChange = () => {
+        let NewText = textOfNewPostRef.current.value;
+        props.UpdateNewPostText(NewText)
     }
 
     return (
@@ -25,7 +29,7 @@ export default function NewPost(props) {
             <div className={s.newPostContainer}>
                 <div className={s.writingPost}>
                     <div className={s.smallPorfileImage}><img src={ProfileImage} alt="Porfile image"></img></div>
-                    <div className={s.inputContainer}><input placeholder="What's new" ref={textOfNewPostRef}></input></div>
+                    <div className={s.inputContainer}><input placeholder="What's new" ref={textOfNewPostRef} value={props.NewPostText} onChange={handleNewPostChange} /></div>
                 </div>
                 <div className={s.visibilitySettings}>
                     <span className={s.personVisibility}>Shows to everyone ▼</span>

@@ -5,6 +5,7 @@ import Sidebar from './Components/Sidebar/Sidebar';
 import Profile from './Components/Profile/Profile';
 import Dialogs from './Components/Dialogs/Dialogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { UpdateNewPostText } from './Redux/state';
 
 function App(props) {
   return (
@@ -20,7 +21,7 @@ function App(props) {
         </nav>
         <div className='mainContent'>
           <Routes>
-            <Route path='/profile' element={<Profile posts={props.state.postsBlock.posts} AddPost={props.AddPost} />} />
+            <Route path='/profile' element={<Profile postsBlock={props.state.postsBlock} AddPost={props.AddPost} UpdateNewPostText={props.UpdateNewPostText} />} />
             <Route path='/dialogs/*' element={<Dialogs dialogsPreview={props.state.dialogsBlock.dialogsPreview} />} />
           </Routes>
         </div>

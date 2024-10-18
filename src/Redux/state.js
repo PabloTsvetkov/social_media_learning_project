@@ -83,8 +83,14 @@ let state = {
                     repostsCount: 8,
                     viewsCount: 350
                 }
-            ]
+            ],
+        NewPostText: 'example of text for the new post'
     }
+}
+
+export let UpdateNewPostText = (newPostText) => {
+    state.postsBlock.NewPostText = newPostText;
+    RenderEntireTree(state);
 }
 
 export let AddPost = (PostText) => {
@@ -101,6 +107,7 @@ export let AddPost = (PostText) => {
         viewsCount: 0
     };
     state.postsBlock.posts.push(NewPostObject);
+    state.postsBlock.NewPostText = '';
     RenderEntireTree(state);
 }
 

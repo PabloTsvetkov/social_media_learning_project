@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { AddPost } from './Redux/state';
+import { AddPost, UpdateNewPostText } from './Redux/state';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
 let RenderEntireTree = (state) => {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <App state={state} AddPost={AddPost} />
+      <App state={state} AddPost={AddPost} UpdateNewPostText={UpdateNewPostText} />
     </React.StrictMode>
   );
 }
