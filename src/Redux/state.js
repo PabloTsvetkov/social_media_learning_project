@@ -1,5 +1,4 @@
-import NewPost from "../Components/Profile/NewPost/NewPost";
-import RenderEntireTree from "../rerender";
+let RenderEntireTree = () => {};
 
 let state = {
     dialogsBlock: {
@@ -109,6 +108,10 @@ export let AddPost = (PostText) => {
     state.postsBlock.posts.push(NewPostObject);
     state.postsBlock.NewPostText = '';
     RenderEntireTree(state);
+}
+
+export const subscribe = (observer) => {
+    RenderEntireTree = observer;
 }
 
 export default state;
