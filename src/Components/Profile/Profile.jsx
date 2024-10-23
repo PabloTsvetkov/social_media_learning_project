@@ -10,7 +10,7 @@ export default function Profile(props) {
         <>
             <ProfileTopHeader />
             <div className={s.profileMainContent}>
-                <NewPost AddPost={props.AddPost} UpdateNewPostText={props.UpdateNewPostText} NewPostText={props.postsBlock.NewPostText} />
+                <NewPost dispatch={props.dispatch} NewPostText={props.postsBlock.NewPostText} />
                 <div className={s.postBlock}>
                     {props.postsBlock.posts.map((el) => (<Post postText={el.postText} likesCount={el.likesCount} commentsBlock={el.commentsBlock} repostsCount={el.repostsCount} viewsCount={el.viewsCount}/>))}
                 </div>

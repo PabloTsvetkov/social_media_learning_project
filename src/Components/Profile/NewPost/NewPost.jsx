@@ -16,12 +16,14 @@ export default function NewPost(props) {
     let textOfNewPostRef = React.createRef();
     let AddNewPost = () => {
         let textOfNewPost = textOfNewPostRef.current.value;
-        props.AddPost(textOfNewPost);
+        let action = { type: 'ADD-POST', TextOfNewPost: textOfNewPost };
+        props.dispatch(action);
     }
 
     let handleNewPostChange = () => {
         let NewText = textOfNewPostRef.current.value;
-        props.UpdateNewPostText(NewText)
+        let action = { type: "UPDATE-NEW-POST-TEXT", NewText: NewText };
+        props.dispatch(action);
     }
 
     return (

@@ -21,7 +21,7 @@ function App(props) {
         </nav>
         <div className='mainContent'>
           <Routes>
-            <Route path='/profile' element={<Profile postsBlock={props.state.postsBlock} AddPost={props.AddPost} UpdateNewPostText={props.UpdateNewPostText} />} />
+            <Route path='/profile' element={<Profile postsBlock={props.state.postsBlock} dispatch={props.dispatch} />} />
             <Route path='/dialogs/*' element={<Dialogs dialogsPreview={props.state.dialogsBlock.dialogsPreview} />} />
           </Routes>
         </div>

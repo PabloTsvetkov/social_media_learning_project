@@ -90,57 +90,33 @@ let store = {
     GetState() {
         return this._state;
     },
-    UpdateNewPostText(newPostText) {
-        this._state.postsBlock.NewPostText = newPostText;
-        RenderEntireTree(this._state);
-    },
-    AddPost(PostText) {
-        let NewPostObject = {
-            id: 5,
-            postText: PostText,
-            likesCount: 0,
-            commentsBlock: {
-                commentsCount: 0,
-                comments: [
-                ]
-            },
-            repostsCount: 0,
-            viewsCount: 0
-        };
-        this._state.postsBlock.posts.push(NewPostObject);
-        this._state.postsBlock.NewPostText = '';
-        RenderEntireTree(this._state);
-    },
     subscribe(observer) {
         RenderEntireTree = observer;
+    },
+
+    dispatch(action) {
+        if (action.type === "UPDATE-NEW-POST-TEXT") {
+            this._state.postsBlock.NewPostText = action.newPostText;
+            RenderEntireTree(this._state);
+        }
+           else if (action.type === "ADD-POST") {
+            let NewPostObject = {
+                id: 5,
+                postText: action.PostText,
+                likesCount: 0,
+                commentsBlock: {
+                    commentsCount: 0,
+                    comments: [
+                    ]
+                },
+                repostsCount: 0,
+                viewsCount: 0
+            };
+            this._state.postsBlock.posts.push(NewPostObject);
+            this._state.postsBlock.NewPostText = '';
+            RenderEntireTree(this._state);
+           }
     }
 }
-
-// export let UpdateNewPostText = (newPostText) => {
-//     state.postsBlock.NewPostText = newPostText;
-//     RenderEntireTree(state);
-// }
-
-// export let AddPost = (PostText) => {
-//     let NewPostObject = {
-//         id: 5,
-//         postText: PostText,
-//         likesCount: 0,
-//         commentsBlock: {
-//             commentsCount: 0,
-//             comments: [
-//             ]
-//         },
-//         repostsCount: 0,
-//         viewsCount: 0
-//     };
-//     state.postsBlock.posts.push(NewPostObject);
-//     state.postsBlock.NewPostText = '';
-//     RenderEntireTree(state);
-// }
-
-// export const subscribe = (observer) => {
-//     RenderEntireTree = observer;
-// }
 
 export default store;
