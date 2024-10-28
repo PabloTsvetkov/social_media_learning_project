@@ -11,19 +11,19 @@ import { IoIosMusicalNotes } from "react-icons/io";
 import { CiText } from "react-icons/ci";
 import { IoSettingsSharp } from "react-icons/io5";
 import state from "../../../Redux/state";
+import { AddPostActionCreator, UpdateNewPostTextActionCreator } from "../../../Redux/state";
 
 export default function NewPost(props) {
     let textOfNewPostRef = React.createRef();
+
     let AddNewPost = () => {
         let textOfNewPost = textOfNewPostRef.current.value;
-        let action = { type: 'ADD-POST', TextOfNewPost: textOfNewPost };
-        props.dispatch(action);
+        props.dispatch(AddPostActionCreator(textOfNewPost));
     }
 
     let handleNewPostChange = () => {
         let NewText = textOfNewPostRef.current.value;
-        let action = { type: "UPDATE-NEW-POST-TEXT", NewText: NewText };
-        props.dispatch(action);
+        props.dispatch(UpdateNewPostTextActionCreator(NewText));
     }
 
     return (
